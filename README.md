@@ -2,107 +2,82 @@
 
 This project is licensed under the MIT license.
 
-# Overview
+# Overview:
 
-MernWeb is a decentralized application (DApp) leveraging blockchain technology and smart contracts to streamline the creation of events and ticketing.
-This DApp offers users a reliable and efficient solution for managing their events.
-It also offers a user-friendly platform that ensures the accurate management of ticket sales while maintaining the highest standards of security and privacy.
+MernWeb is a React JS (web) application that runs on any device browser.
 
-# Project Structure
+### Key Features:
 
-# Software Requirements:
+- **Sign Up**: allows users to create a new account by providing necessary details like username, email, and password.
+- **Account Activation**: involves sending an activation link containing a unique token to the provided email address.
+- **Login**: allows registered users to log in to their accounts using their credentials (email and password).
+- **Forgot Password**: allows users to enter their email and receive a unique reset password token or link to reset their password.
 
->**Note**: It is necessary to download the following desktop applications for your Windows, Mac, or Linux OS.
+# Environment and Setup:
 
-1. [Git](https://git-scm.com/downloads)
+>**Note**: Make sure you have installed the latest version of [Git](https://git-scm.com/downloads), [Node.js](https://nodejs.org/en/download/package-manager), and [MongoDB](https://www.mongodb.com/try/download/community) before proceeding.
 
-2. [Node.js](https://nodejs.org/en/download/package-manager)
+### 1. Clone the Repository
 
-3. [MongoDB](https://www.mongodb.com/try/download/community)
-
-4. [Ganache](https://archive.trufflesuite.com/ganache/)
-
-6. [MetaMask](https://MetaMask.io/download/)
-
-# Setup Installation:
-
-### Step 1. Clone the Repository
-
-Open a new terminal, and run the following commands step-by-step:
+Download the project to your local machine (Desktop):
 
 ```bash
     $ cd Desktop
     $ git clone https://github.com/Dennis-Maigua/MernWeb.git
+    $ exit
 ```
 
-### Step 2. Install Packages & Dependencies
+### 2. Run the Backend and Frontend
 
-Open another terminal separately, and install all the requirements for the project.
+Open the project folders in 2 terminals, install their packages/dependencies, and run them seperately:
 
-- Terminal 1 (Backend):
+- Terminal 1 (Backend/Server):
 
 ```bash
+    # using npm
     $ cd Destop/MernWeb/server
     $ npm i
+    $ npm start
+
+    # OR using Yarn
+    $ cd Desktop/MernWeb/server
+    $ yarn add
+    $ yarn start
 ```
 
-- Terminal 2 (Frontend):
+- Terminal 2 (Frontend/Client):
 
 ```bash
+    # using npm
     $ cd Destop/MernWeb/client
     $ npm i
-```
-
-### Step 3. Connect Ganache to MetaMask & Project
-
-- Open Ganache in your local desktop, and click `New Workspace (Ethereum)`.
-
-- Click `Add Project`, select the `truffle.config.js` file from your project folder, then click `Open` >> `Start`.
-
-- Choose any `Address` below the first one, click on its `key` and copy the `Private Key`.
-
-- Open MetaMask extension in your Browser, click `Import an Existing Account`, and enter the `12-word phrase/mnemonic` displayed on Ganache in the `Accounts` tab.
-
-- Click `Ethereum Mainnet` >> `+ Add network` >> `Add a network manually`.
-
-- Enter Network name: `Ganache`, New RPC URL: `HTTP://127.0.0.1:7545`, Chain ID: `1337`, Currency symbol: `ETH`, then click `Save` >> `Switch to Ganache`. 
-
-- Install and open MetaMask extension in another Browser, click `Create a New Wallet`, then repeat the above two steps immediately before this one.
-
-- Click `Account 1` >> `+ Add account or hardware wallet` >> `Import account`.
-
-- Finally, paste in the Private Key that you had previously copied from Ganache, then click `Import`.
-
->**Note**: Do not close Ganache from this point onwards, otherwise it will reset everything and you will have to repeat this process again manually. However, you can close it when you are done with the project.
-
-### Step 4. Compile & Deploy Smart Contracts
-
-Go back to `Terminal 2` above, and run the commands below:
-
-```bash
-    $ truffle compile
-    $ truffle migrate --network development
-
-    # in case of contracts/migrations file changes. if not, skip this commands
-    $ truffle compile
-    $ truffle migrate --reset
-```
-
->**Note**: If you close or exit Ganache, repeat the above steps 3 and 4 only before restarting the project.
-
-# Usage
-
-### Step 5. Run the Project
-
-Start the `client` and `server` in both terminals.
-
-- Terminal 1 and 2:
-
-```bash
     $ npm start
+
+    # OR using Yarn
+    $ cd Desktop/MernWeb/client
+    $ yarn add
+    $ yarn start
 ```
 
->**Note**: If everything is set up correctly, you should see the web application running smoothly in your Web Browser provided you have all the requirements needed.
+### 3. (Optional) Update the Packages/Dependencies
+
+If you want to keep all packages and dependencies up-to-date, run on both terminals:
+
+```bash
+    # using npm
+    $ npm i -g npm-check-updates
+    $ ncu -u
+    $ npm install
+
+    # OR using Yarn
+    $ yarn add -g yarn-check-updates
+    $ ncu -u
+    $ yarn add
+```
+
+If everything is set up correctly, you should see your new app running in your Android Emulator or iOS Simulator shortly provided you have set it up correctly.
+
+This is one way to run your app — you can also run it directly from within your Smartphone/Mobile Device, or Android Studio, and Xcode respectively.
    
 # Contributing:
 
